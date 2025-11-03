@@ -2,16 +2,18 @@
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
+#include <typeinfo>
 
 Base::~Base()
 {
     std::cout << "Base destructor called" << std::endl;
 }
+
 Base *generate(void)
 {
     srand(time(NULL));
     int random = std::rand() % 3;
- std::cout<<random <<std::endl;
+    std::cout<<random <<std::endl;
     if (random == 0)
         return new A();
     else if (random == 1)
@@ -39,8 +41,9 @@ void identify(Base &p)
         std::cout << "A" << std::endl;
         return;
     }
-    catch (...)
+    catch (std::bad_cast &b)
     {
+        std::cout<< b.what() << "A" << std::endl;
     }
     try
     {
@@ -48,8 +51,9 @@ void identify(Base &p)
         std::cout << "B" << std::endl;
         return;
     }
-    catch (...)
+    catch (std::bad_cast &b)
     {
+        std::cout<< b.what() << "B" << std::endl;
     }
     try
     {
@@ -57,8 +61,9 @@ void identify(Base &p)
         std::cout << "C" << std::endl;
         return;
     }
-    catch (...)
+    catch (std::bad_cast &b)
     {
+        std::cout<< b.what() << "C" << std::endl;
     }
     std::cout << "Unknown type" << std::endl;
 }
