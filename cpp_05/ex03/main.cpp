@@ -114,41 +114,32 @@ int main(void)
 	
 
 	std::cout << "\033[33m" << std::endl << "Test ex03 Intern" << "\033[0m" << std::endl;
-AForm *robo_intern = nullptr;
-try {
-    Intern Jr_Intern;
+	Intern Jr_Intern;
+	AForm *form = NULL;
 
-    robo_intern = Jr_Intern.makeForm("DoYouKnowMe", "Hmmmm");
-    delete robo_intern; // Clean up if allocated
+	form = Jr_Intern.makeForm("robotomy request", "Bender");
+	if (form) {
+		std::cout << form->getName() << " created successfully" << std::endl;
+		delete form;
+	}
 
-    robo_intern = Jr_Intern.makeForm("RobotomyRequestForm", "World");
-    std::cout << robo_intern->getName() << std::endl;
-    delete robo_intern;
-} catch (...) {
-    std::cout << "An error occurred." << std::endl;
-    if (robo_intern)
-        delete robo_intern;
-}
+	form = Jr_Intern.makeForm("shrubbery creation", "Garden");
+	if (form) {
+		std::cout << form->getName() << " created successfully" << std::endl;
+		delete form;
+	}
 
-AForm *robo_intern = nullptr;
-try {
-    Intern Jr_Intern;
+	form = Jr_Intern.makeForm("presidential pardon", "Ford");
+	if (form) {
+		std::cout << form->getName() << " created successfully" << std::endl;
+		delete form;
+	}
 
-    robo_intern = Jr_Intern.makeForm("DoYouKnowMe", "Hmmmm");
-    if (robo_intern) {
-        delete robo_intern;
-    }
-
-    robo_intern = Jr_Intern.makeForm("RobotomyRequestForm", "World");
-    if (robo_intern) {
-        std::cout << robo_intern->getName() << std::endl;
-        delete robo_intern;
-    }
-} catch (...) {
-    std::cout << "An error occurred." << std::endl;
-    if (robo_intern)
-        delete robo_intern;
-}
+	form = Jr_Intern.makeForm("unknown request", "Nobody");
+	if (form) {
+		std::cout << form->getName() << " created successfully" << std::endl;
+		delete form;
+	}
 
 	return (0);
 }
