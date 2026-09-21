@@ -22,7 +22,7 @@ s.push(1);
 s.push(2);
 s.push(3);
 
-// ❌ This won't compile:
+// This won't compile:
 for (std::stack<int>::iterator it = s.begin(); it != s.end(); ++it)
     std::cout << *it;  // ERROR! Stack has no begin() or end()!
 ```
@@ -30,8 +30,8 @@ for (std::stack<int>::iterator it = s.begin(); it != s.end(); ++it)
 ### The Solution: MutantStack
 
 Create a **mutant** (modified) stack that:
-- ✅ Works like a normal stack (push, pop, top)
-- ✅ **ALSO** can be iterated through (begin, end)
+- Works like a normal stack (push, pop, top)
+- **Correct:** ALSO** can be iterated through (begin, end)
 
 ---
 
@@ -363,7 +363,7 @@ It's called MutantStack because:
 - It has **extra abilities** (iteration) that normal stacks don't have
 - It's still a stack at its core, just enhanced
 
-Like a superhero origin story - same person, but with new powers! 🦸‍♂️
+Like a superhero origin story - same person, but with new powers! 
 
 ---
 
@@ -391,26 +391,26 @@ Required in templates to access members from dependent base class.
 
 ## Common Mistakes to Avoid
 
-❌ **Forgetting typename**:
+**Incorrect:** Forgetting typename**:
 ```cpp
 std::stack<T>::container_type::iterator it;  // Error!
 ```
 
-✅ **Correct**:
+**Correct:** Correct**:
 ```cpp
 typename std::stack<T>::container_type::iterator it;
 ```
 
 ---
 
-❌ **Trying to add new data members**:
+**Incorrect:** Trying to add new data members**:
 ```cpp
 class MutantStack : public std::stack<T> {
     std::vector<T> myData;  // Don't! Use parent's container
 };
 ```
 
-✅ **Use parent's container**:
+**Correct:** Use parent's container**:
 ```cpp
 return this->c.begin();  // Access parent's protected member
 ```
@@ -458,14 +458,14 @@ List contents:
 
 ## What You Learned
 
-✅ How container adapters work  
-✅ Inheriting from STL containers  
-✅ Accessing protected members from parent class  
-✅ Adding functionality to existing classes  
-✅ Template class inheritance  
-✅ Understanding stack's internal structure  
-✅ Creating custom iterators  
-✅ Comparing different container interfaces  
+- How container adapters work  
+- Inheriting from STL containers  
+- Accessing protected members from parent class  
+- Adding functionality to existing classes  
+- Template class inheritance  
+- Understanding stack's internal structure  
+- Creating custom iterators  
+- Comparing different container interfaces  
 
 ---
 
@@ -487,7 +487,7 @@ The stack still works as a stack, but now it's also iterable!
 
 ---
 
-## Congratulations! 🎉
+## Congratulations! 
 
 You've completed all three exercises and learned:
 - Template functions and classes

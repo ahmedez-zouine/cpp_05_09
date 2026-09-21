@@ -6,7 +6,7 @@ All code is strictly compliant with the **C++98 standard**, compiled with `-Wall
 
 ---
 
-## 📚 Curriculum Breakdown
+## Curriculum Breakdown
 
 | Module | Core Concepts | Exercises |
 |---|---|---|
@@ -18,7 +18,7 @@ All code is strictly compliant with the **C++98 standard**, compiled with `-Wall
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 cpp_05_09/
@@ -67,7 +67,7 @@ cpp_05_09/
 
 ---
 
-## 🛠️ Compilation & Standards
+## Compilation & Standards
 
 Each exercise is self-contained with its own `Makefile` supporting:
 - `all`: Compiles the binary

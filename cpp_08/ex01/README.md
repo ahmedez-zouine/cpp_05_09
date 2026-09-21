@@ -32,7 +32,7 @@ Step 1: Sort the array
 [2, 3, 5, 10, 17]
 
 Step 2: Check adjacent pairs (only neighbors matter!)
-2 to 3   → span = 1  ⭐ Shortest!
+2 to 3   → span = 1  Shortest!
 3 to 5   → span = 2
 5 to 10  → span = 5
 10 to 17 → span = 7
@@ -188,7 +188,7 @@ int Span::shortestSpan() {
 1. Sort: [5, 8, 10, 100]
 2. Check pairs:
    - 8 - 5 = 3
-   - 10 - 8 = 2  ⭐ Shortest!
+   - 10 - 8 = 2  Shortest!
    - 100 - 10 = 90
 3. Return 2
 ```
@@ -375,12 +375,12 @@ Sorting is the most expensive operation. Finding adjacent differences is O(n), b
 
 ## Common Mistakes to Avoid
 
-❌ **Not checking if container is empty**:
+**Incorrect:** Not checking if container is empty**:
 ```cpp
 int min = *std::min_element(numbers.begin(), numbers.end());  // Crash if empty!
 ```
 
-✅ **Always check size first**:
+**Correct:** Always check size first**:
 ```cpp
 if (numbers.size() < 2)
     throw std::length_error("Need at least 2 numbers");
@@ -388,12 +388,12 @@ if (numbers.size() < 2)
 
 ---
 
-❌ **Modifying original array**:
+**Incorrect:** Modifying original array**:
 ```cpp
 std::sort(numbers.begin(), numbers.end());  // Changes original order!
 ```
 
-✅ **Sort a copy**:
+**Correct:** Sort a copy**:
 ```cpp
 std::vector<int> sorted = numbers;  // Make a copy
 std::sort(sorted.begin(), sorted.end());
@@ -436,13 +436,13 @@ Expected error: Not enough space to add all numbers
 
 ## What You Learned
 
-✅ Creating custom container classes  
-✅ Using `std::vector` as internal storage  
-✅ Implementing range-based operations with iterators  
-✅ Using STL algorithms (`sort`, `min_element`, `max_element`)  
-✅ Exception handling with `std::length_error`  
-✅ Efficient bulk operations  
-✅ Working with large datasets (10,000+ elements)  
+- Creating custom container classes  
+- Using `std::vector` as internal storage  
+- Implementing range-based operations with iterators  
+- Using STL algorithms (`sort`, `min_element`, `max_element`)  
+- Exception handling with `std::length_error`  
+- Efficient bulk operations  
+- Working with large datasets (10,000+ elements)  
 
 ---
 

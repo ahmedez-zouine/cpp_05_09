@@ -184,24 +184,24 @@ The container must have:
 
 ## Common Mistakes to Avoid
 
-❌ **Forgetting typename**:
+**Incorrect:** Forgetting typename**:
 ```cpp
 T::iterator it;  // Error! Compiler confused
 ```
 
-✅ **Correct**:
+**Correct:** Correct**:
 ```cpp
 typename T::iterator it;  // OK!
 ```
 
 ---
 
-❌ **Comparing iterator directly to value**:
+**Incorrect:** Comparing iterator directly to value**:
 ```cpp
 if (*res_it == value)  // Wrong if res_it == end()!
 ```
 
-✅ **Correct**:
+**Correct:** Correct**:
 ```cpp
 if (res_it != container.end())  // Check first!
     return std::distance(container.begin(), res_it);
@@ -238,12 +238,12 @@ Value 99 not found.
 
 ## What You Learned
 
-✅ How to write template functions  
-✅ Using `std::find()` algorithm  
-✅ Working with iterators  
-✅ Calculating distances between iterators  
-✅ Understanding `begin()` and `end()`  
-✅ Generic programming principles  
+- How to write template functions  
+- Using `std::find()` algorithm  
+- Working with iterators  
+- Calculating distances between iterators  
+- Understanding `begin()` and `end()`  
+- Generic programming principles  
 
 ---
 

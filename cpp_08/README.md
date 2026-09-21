@@ -1,6 +1,6 @@
 # C++ Module 08: STL (Standard Template Library)
 
-## 📚 Subject Overview
+## Subject Overview
 
 This module introduces the **Standard Template Library (STL)**, one of the most powerful features of C++. The STL provides a collection of template classes and functions that implement common data structures and algorithms, making C++ programming more efficient and standardized.
 
@@ -13,7 +13,7 @@ This module introduces the **Standard Template Library (STL)**, one of the most 
 
 ---
 
-## 🎯 Exercises
+## Exercises
 
 ### Exercise 00: Easy Find
 
@@ -257,7 +257,7 @@ while (it != ite) {
 
 ---
 
-## 🛠️ Compilation and Execution
+## Compilation and Execution
 
 ### Compile All Exercises
 
@@ -290,7 +290,7 @@ make
 
 ---
 
-## 📖 Key Takeaways
+## Key Takeaways
 
 1. **STL is Powerful**: Pre-built containers and algorithms save time and are optimized
 2. **Templates Enable Genericity**: Write once, use with any type
@@ -300,7 +300,7 @@ make
 
 ---
 
-## 🔗 Related Concepts
+## Related Concepts
 
 - **Templates**: Generic programming
 - **Iterators**: Accessing container elements

@@ -711,7 +711,7 @@ Typically, cpp_07 exercises follow this structure:
 
 ## Best Practices
 
-### **✅ DO:**
+### **DO:**
 
 1. **Use Clear Template Parameter Names**
    ```cpp
@@ -754,7 +754,7 @@ Typically, cpp_07 exercises follow this structure:
    }
    ```
 
-### **❌ DON'T:**
+### **DON'T:**
 
 1. **Overuse Templates**
    - Don't make everything a template if it's not needed
@@ -898,4 +898,4 @@ Templates are a powerful feature that enables:
 - **Performance** with zero runtime overhead
 - **Flexibility** in API design
 
-Master these concepts to write efficient, reusable C++ code! 🚀
+Master these concepts to write efficient, reusable C++ code!
