@@ -1,0 +1,38 @@
+# Object files and libraries
+*.o
+*.a
+*.so
+*.dylib
+*.dSYM/
+
+# Output binaries
+Bureaucrat
+Form
+AForm
+convert
+Serialization
+Identify
+whatever
+array_test
+easyfind
+Span
+Mutated
+btc
+RPN
+PmergeMe
+a.out
+
+# Generated files
+*_shrubbery
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor / IDE directories
+.vscode/
+.idea/
+*.swp
+*~
